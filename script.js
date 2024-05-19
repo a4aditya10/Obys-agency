@@ -34,13 +34,13 @@ loco()
 
 function loadingAnimation() {
     var tl = gsap.timeline();
-    tl.from(".line h1", {
-      y: 150,
+    tl.from("#loader h1", {
+      y: -150,
       stagger: 0.25,
       duration: 0.6,
       delay: 0.5,
     });
-    tl.from("#line1-part1", {
+    tl.from(".load h4", {
       opacity: 0,
       onStart: function () {
         var h5timer = document.querySelector("#h5timer");
@@ -54,7 +54,7 @@ function loadingAnimation() {
         }, 27);
       },
     });
-    tl.to(".line h2", {
+    tl.to("#main", {
         animationName: "loaderAnime",
         opacity: 1,
       });
@@ -298,22 +298,22 @@ footerText.addEventListener("mouseleave",function(){
         stagger:0.05
     })
 })
-function flagAnimation() {
-    document.addEventListener("mousemove", function (dets) {
-      gsap.to("#flag", {
-        x: dets.x,
-        y: dets.y,
-      });
-    });
-    document.querySelector("#hero3").addEventListener("mouseenter", function () {
-      gsap.to("#flag", {
-        opacity: 1,
-      });
-    });
-    document.querySelector("#hero3").addEventListener("mouseleave", function () {
-      gsap.to("#flag", {
-        opacity: 0,
-      });
-    });
-  }
-flagAnimation();
+// function flagAnimation() {
+//     document.addEventListener("mousemove", function (dets) {
+//       gsap.to("#flag", {
+//         x: dets.x,
+//         y: dets.y,
+//       });
+//     });
+//     document.querySelector("#hero3").addEventListener("mouseenter", function () {
+//       gsap.to("#flag", {
+//         opacity: 1,
+//       });
+//     });
+//     document.querySelector("#hero3").addEventListener("mouseleave", function () {
+//       gsap.to("#flag", {
+//         opacity: 0,
+//       });
+//     });
+//   }
+// flagAnimation();
